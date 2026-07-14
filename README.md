@@ -3,7 +3,8 @@
 Webcam-based laparoscopic simulation for deliberate surgical training.
 
 Pyxis Lab is a browser-based surgical simulation platform for laparoscopic skills practice. Train peg transfer, pattern cutting, and knot tying with real-time instrument analytics, assessment workflows, and performance reports.
-![Uploading image.png…]()
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/55d1d664-a2e0-4d40-96a6-d95a51e10eee" />
 
 ## Product Focus
 
