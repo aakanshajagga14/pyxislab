@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafb;
+  --foreground: #1a2332;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --muted: #64748b;
+  --accent: #0d9488;
+  --accent-light: #ccfbf1;
+  --accent-muted: #5eead4;
+  --clinical-blue: #0369a1;
+  --clinical-blue-light: #e0f2fe;
+  --success: #059669;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --shadow-sm: 0 1px 2px 0 rgb(15 23 42 / 0.04);
+  --shadow-md: 0 4px 6px -1px rgb(15 23 42 / 0.06), 0 2px 4px -2px rgb(15 23 42 / 0.04);
+
+  /* Marketing / landing (editorial dark) — do not use in simulator routes */
+  --brand-navy: #0a0e1a;
+  --brand-navy-deep: #060810;
+  --brand-surface: #10162a;
+  --brand-line: #1f2740;
+  --brand-ink: #f4f6fa;
+  --brand-muted: #8b93a8;
+  --brand-accent: #c8f169;
+  --brand-accent-dim: #7a8a4a;
+}
+
+[data-theme="dark"] {
+  --background: #0f1419;
+  --foreground: #e8edf2;
+  --surface: #1a2332;
+  --border: #2d3a4d;
+  --muted: #94a3b8;
+  --accent: #2dd4bf;
+  --accent-light: #134e4a;
+  --clinical-blue-light: #0c4a6e;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-clinical-blue: var(--clinical-blue);
+  --color-clinical-blue-light: var(--clinical-blue-light);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-navy-deep: var(--brand-navy-deep);
+  --color-brand-surface: var(--brand-surface);
+  --color-brand-line: var(--brand-line);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-dim: var(--brand-accent-dim);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--brand-navy);
+  color: var(--brand-ink);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.35s ease-out forwards;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+.metric-transition {
+  transition: width 0.45s ease-out, opacity 0.3s ease-out;
+}
+
+.page-enter {
+  animation: fade-in 0.4s ease-out forwards;
+}
